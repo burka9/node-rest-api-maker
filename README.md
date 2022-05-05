@@ -6,6 +6,14 @@ Creates rest api project with ES6 feature enabled.
 
 ---
 
+Installation
+
+```
+$ npm install --global rest-api-maker
+```
+
+----
+
 Usage
 ```
 $ rest <PROJECT_NAME> <FLAGS>
