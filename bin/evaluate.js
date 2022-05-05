@@ -52,9 +52,9 @@ module.exports = args => {
 }`
 
 	let env = `
-	OFFLINE_DATABASE_URI=mongodb://127.0.0.1:27017/${name}
-	ONLINE_DATABASE_URI=mongodb+srv://burka:burkaman@cluster0.ja273.mongodb.net/${name}?retryWrites=true&w=majority
-	DATABASE_NAME=${name}
+OFFLINE_DATABASE_URI=mongodb://127.0.0.1:27017/${name}
+ONLINE_DATABASE_URI=mongodb+srv://burka:burkaman@cluster0.ja273.mongodb.net/${name}?retryWrites=true&w=majority
+DATABASE_NAME=${name}
 `
 
 	fs.writeFileSync(path.resolve('bin/template/package.json'), pkg, {
