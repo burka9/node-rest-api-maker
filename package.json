@@ -1,6 +1,6 @@
 {
   "name": "rest-api-maker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A cli tool to create necessary folder structure for a REST API.",
   "main": "bin/index.js",
   "bin": {
