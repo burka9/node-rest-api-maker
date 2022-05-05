@@ -1,5 +1,5 @@
 #!/bin/sh
-cp bin/template $1 -rT
+cp $2/template $1 -rT
 echo 'Files copied'
 
 cd $1

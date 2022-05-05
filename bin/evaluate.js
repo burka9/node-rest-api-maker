@@ -36,7 +36,7 @@ module.exports = args => {
 		}
 	}
 
-	let script = path.resolve('bin/scripts.sh')
+	let script = path.resolve(__dirname, 'scripts.sh')
 	
 	fs.mkdirSync(parent)
 	console.log(`Created ${name}`)
@@ -57,11 +57,11 @@ ONLINE_DATABASE_URI=mongodb+srv://burka:burkaman@cluster0.ja273.mongodb.net/${na
 DATABASE_NAME=${name}
 `
 
-	fs.writeFileSync(path.resolve('bin/template/package.json'), pkg, {
+	fs.writeFileSync(path.resolve(__dirname, 'template/package.json'), pkg, {
 		flag: 'w+'
 	})
 
-	fs.writeFileSync(path.resolve('bin/template/.env'), env, {
+	fs.writeFileSync(path.resolve(__dirname, 'template/.env'), env, {
 		flag: 'w+'
 	})
 
@@ -69,7 +69,7 @@ DATABASE_NAME=${name}
 		if (err) return console.log(err)
 		if (serr) return console.log(serr)
 		
-		let child = spawn(script, [ name ])
+		let child = spawn(script, [ name, __dirname ])
 		child.stdout.on('data', data => {
 			console.log(data.toString())
 		})
