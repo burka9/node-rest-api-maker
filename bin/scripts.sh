@@ -13,7 +13,7 @@ npm install --save-dev @babel/node
 npm install --save-dev @babel/preset-env
 echo 'dev-dependencies installed'
 
-echo 'Configuring git'
+echo 'Configuring git...'
 git init
 git add .
 git commit -m "Initial commit"

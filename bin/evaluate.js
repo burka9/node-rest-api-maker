@@ -65,7 +65,9 @@ DATABASE_NAME=${name}
 		flag: 'w+'
 	})
 
-	exec(`chmod +x ${script}`, (err, out, serr) => {
+	let chmod = require('os').platform == 'linux' ? `chmod +x ${script}` : ';'
+
+	exec(chmod, (err, out, serr) => {
 		if (err) return console.log(err)
 		if (serr) return console.log(serr)
 		
