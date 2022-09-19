@@ -1,9 +1,0 @@
-{
-	"name": "test",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"serve-build": "babel-node ./src/index.js local",
-		"serve": "nodemon --exec \"npm run serve-build\""
-	}
-}
